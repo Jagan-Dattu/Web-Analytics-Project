@@ -1,0 +1,9 @@
+ts,type,tableId,street,board,payload,result
+2025-09-04T10:27:59.959Z,table_create,aEgNcU8w,,,"""""",""""""
+2025-09-04T10:28:02.160Z,deal_hole,aEgNcU8w,,,"""""",""""""
+2025-09-04T10:28:03.210Z,deal_board,aEgNcU8w,flop,"7d,Qd,8s","""""",""""""
+2025-09-04T10:28:05.205Z,suggest,aEgNcU8w,,,"{""hero"": [""2c"", ""2h""], ""board"": [""7d"", ""Qd"", ""8s""], ""position"": ""BTN"", ""street"": ""flop"", ""pot"": 0, ""to_call"": 0, ""stack"": 1000, ""last_villain_action"": ""open-raise"", ""num_opponents"": 3, ""trials"": 1200}","{""equity"": 0.1058, ""advice"": ""check"", ""explain"": ""villain_range≈std_open"", ""notes"": ""Beginner mode heuristic; ranges are simplified.""}"
+2025-09-04T10:28:19.630Z,table_create,9cW9HsYS,,,"""""",""""""
+2025-09-04T10:28:21.480Z,deal_hole,9cW9HsYS,,,"""""",""""""
+2025-09-04T10:28:22.740Z,deal_board,9cW9HsYS,flop,"Jc,Ah,Kh","""""",""""""
+2025-09-04T10:28:46.848Z,table_create,a6IphbnI,,,"""""",""""""

@@ -116,7 +116,7 @@ before this check eveyrthing, ur python code working , csv file in correct path,
 
 Terminal 1: Start the AI Server
 # Navigate to the ml folder
-cd D:\projects\poker-assist\ml
+cd D:\projects\poker-assist\ml if not coming directly click D: it goes to that ml path and run remaining two below
 .venv\Scripts\activate   # activates virtual environment
 uvicorn app:app --reload --port 8001
 
@@ -261,4 +261,5 @@ Game server running (Node, port 8000)
 UI running (React, port 5173)
 Logs in /logs/ folder
 Analytics export via ETL
+
 

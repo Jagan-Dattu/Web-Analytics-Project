@@ -40,6 +40,24 @@ poker-assist-project/
     │   ├─ poker_model.pkl  >> TRAINED MODEL (GENERATED) <<
     │   └─ requirements.txt >> PYTHON DEPENDENCIES <<
     └─ README.md
+    Architecture (keep it simple & clean) poker-assist/ 
+   ├─ server/ # Node.js (Express) game API │
+   ├─ package.json │
+   ├─ src/ │ 
+   │ ├─ index.js # Express server │ 
+   │ ├─ deck.js # 52-card deck helpers │ 
+   │ ├─ table.js # in-memory table state + dealing │ 
+   │ ├─ logger.js # action+hand logs (JSONL/CSV) │ 
+   │ └─ config.js ├─ ml/ # Python FastAPI microservice │ 
+   ├─ requirements.txt │ 
+   └─ app.py # equity, range inference, suggestion API 
+   ├─ client/ # React frontend │
+   ├─ package.json │
+   └─ src/ │ 
+   ├─ main.jsx │ 
+   ├─ App.jsx │
+   └─ components/ │
+   └─ export_logs.py # ETL: server logs -> CSV for analytics └─ README.md
   
 ## 📁 Project Structure
 

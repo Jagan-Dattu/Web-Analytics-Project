@@ -1,4 +1,4 @@
-# ♠️ Poker Assist Project
+# ♠️ A Game Assist Project
 
 A full-stack, playable Texas Hold'em poker application that provides real-time, data-driven suggestions to the player. This project integrates a Node.js game server, a Python/FastAPI machine learning service, and a React frontend to create a comprehensive and interactive experience.
 
@@ -261,3 +261,4 @@ Game server running (Node, port 8000)
 UI running (React, port 5173)
 Logs in /logs/ folder
 Analytics export via ETL
+

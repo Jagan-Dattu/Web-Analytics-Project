@@ -114,6 +114,7 @@ You will need to open three separate terminals to run the full application. Make
 
 before this check eveyrthing, ur python code working , csv file in correct path, check codes in all (app.py,index.py,......), 
 
+ Run all below ones in 3 seperate CMD prompts
 Terminal 1: Start the AI Server
 # Navigate to the ml folder
 cd D:\projects\poker-assist\ml if not coming directly click D: it goes to that ml path and run remaining two below
@@ -261,5 +262,6 @@ Game server running (Node, port 8000)
 UI running (React, port 5173)
 Logs in /logs/ folder
 Analytics export via ETL
+if u wanna change further u ccan change from ur computer goind to app.py or index.js or process.py,app.js or anywhere 
 
 

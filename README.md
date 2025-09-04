@@ -133,5 +133,131 @@ npm run dev
 
 Your web browser should automatically open (usually to http://localhost:3000 or http://localhost:5173) where you can create a table, deal cards, and start playing!
 
+**INDEPTH STEPS:**
+Step 1: Create project folder
+Open your Command Prompt (Windows) or Terminal (Linux/Mac) and type:
+mkdir poker-assist
+cd poker-assist
+Now you’re inside the root folder poker-assist/.
+🧠 Folder structure we’ll build
+poker-assist/
+├─ server/       (Node backend)
+├─ ml/           (Python ML service)
+├─ client/       (React frontend)
+├─ etl/          (ETL scripts for analytics)
+└─ logs/         (game event logs auto-saved)
 
+🐍 Step 2: Set up ML (Python) microservice
 
+📍 In the same terminal (still inside poker-assist/):
+mkdir ml
+cd ml
+👉 Now you’re in poker-assist/ml/
+Create a Python virtual environment:
+python -m venv .venv
+Activate it:
+Windows:
+.venv\Scripts\activate
+
+Linux/Mac:
+source .venv/bin/activate
+
+Create requirements.txt:
+echo fastapi==0.110.0 >> requirements.txt
+echo uvicorn==0.29.0 >> requirements.txt
+echo pydantic==2.7.1 >> requirements.txt
+echo numpy==1.26.4 >> requirements.txt
+echo treys==0.1.8 >> requirements.txt
+
+Install dependencies:
+pip install -r requirements.txt
+
+Create the app file:
+notepad app.py   # (Windows, opens Notepad)
+# or
+nano app.py      # (Linux/Mac, opens Nano editor)
+Paste the app.py code I gave earlier (ML service). Save it.
+Run ML server:
+uvicorn app:app --reload --port 8001
+
+Keep this terminal open and running.
+🖥 Step 3: Set up Backend (Node/Express)
+
+📍 Open a new terminal (don’t close the Python one).
+Navigate to root:
+cd poker-assist
+mkdir server
+cd server
+
+👉 Now you’re in poker-assist/server/
+Initialize Node project:
+npm init -y
+Install dependencies:
+npm install express cors axios nanoid
+Create folder src:
+mkdir src
+cd src
+👉 Inside server/src/, create these files:
+config.js
+deck.js
+table.js
+logger.js
+index.js
+evaluator.js
+(Use notepad <filename> on Windows, or nano <filename> on Linux/Mac. Paste the code from earlier.)
+
+Run backend server:
+cd ..
+node src/index.js
+You’ll see: Server running on :8000
+Keep this terminal open too.
+🌐 Step 4: Set up Frontend (React)
+
+📍 Open a third terminal. Go back to root:
+cd poker-assist
+Create React app with Vite:
+npm create vite@latest client -- --template react
+Follow prompts:
+Project name: client
+Framework: React
+Variant: JavaScript
+Then:
+cd client
+npm install
+
+Open file client/src/App.jsx and replace with the code I gave earlier.
+Run it:
+npm run dev
+It will show something like http://localhost:5173 — open in your browser.
+📜 Step 5: Set up ETL (Analytics logs)
+📍 In the root folder (poker-assist/):
+mkdir etl
+cd etl
+notepad export_logs.py
+Paste the export_logs.py code. Save it.
+When you want to export logs:
+python export_logs.py
+This generates etl/events_export.csv → open in Excel / Power BI.
+🚦 How to run everything (summary)
+Terminal 1 → Python ML
+cd poker-assist/ml
+.venv\Scripts\activate  # (Windows)
+uvicorn app:app --reload --port 8001
+
+Terminal 2 → Node server
+cd poker-assist/server
+node src/index.js
+
+Terminal 3 → React frontend
+cd poker-assist/client
+npm run dev
+
+Terminal 4 (optional) → ETL
+cd poker-assist/etl
+python export_logs.py
+👉 This way you’ll have:
+ML microservice running (Python, port 8001)
+Game server running (Node, port 8000)
+UI running (React, port 5173)
+Logs in /logs/ folder
+Analytics export via ETL

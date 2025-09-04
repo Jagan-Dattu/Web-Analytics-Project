@@ -32,7 +32,7 @@ poker-assist-project/
     
     
     
-                                                                                   ├─ client/              >> REACT FRONTEND <<
+    ├─ client/              >> REACT FRONTEND <<
     ├─ server/              >> NODE.JS + EXPRESS GAME SERVER <<
     ├─ ml/                  >> FASTAPI ML SERVICE + PIPELINE <<
     │   ├─ app.py           >> FASTAPI ENTRYPOINT <<
@@ -114,5 +114,6 @@ cd D:\projects\poker-assist\client
 npm run dev
 
 Your web browser should automatically open (usually to http://localhost:3000 or http://localhost:5173) where you can create a table, deal cards, and start playing!
+
 
 
